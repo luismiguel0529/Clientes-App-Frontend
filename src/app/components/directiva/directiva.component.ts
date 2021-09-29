@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivaComponent  {
 
+  title = 'Bienvenido a Angular';
+
+  curso: string = 'Curso Spring 5 Con Angular';
+
+  profesor: string = 'Luis Miguel';
+
   listaCurso: string[] = ['TypeScript','JavaScript','Java','Python','Go'];
   
   habilitar: boolean = true;
