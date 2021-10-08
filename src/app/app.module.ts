@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -10,6 +10,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './components/clientes/form.component'
 import { FormsModule } from '@angular/forms'
+import { registerLocaleData } from '@angular/common';
+import  localeCO  from '@angular/common/locales/es-CO'
+
+registerLocaleData(localeCO, 'CO')
 
 const routes: Routes = [
   {path: '', redirectTo: '/directivas', pathMatch: 'full'},
@@ -34,7 +38,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'CO' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

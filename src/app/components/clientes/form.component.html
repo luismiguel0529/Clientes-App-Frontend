@@ -1,4 +1,5 @@
-<div class="card bg-dark text-white">
+
+<div class="card bg-dark text-white my-3">
     <div class="card-header">{{ titulo }}</div>
     <div class="card-body">
         <form >
@@ -36,3 +37,9 @@
         </form>
     </div>
 </div>
+
+<ul class="alert alert-danger" *ngIf="errores.length > 0">
+    <li *ngFor="let err of errores">
+        {{ err }}
+    </li>
+</ul>
